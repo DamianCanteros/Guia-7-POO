@@ -42,45 +42,31 @@ public class Ejercicio_7 {
     public static void main(String[] args) {
         
         PersonaServicio s1 = new PersonaServicio();
-        
-        System.out.println("ingrese los datos de la primer persona");
-        Persona p1 = s1.crearPersona();
-        System.out.println("ingrese los datos de la segunda persona");
-        Persona p2 = s1.crearPersona();
-        System.out.println("ingrese los datos de la tercera persona");
-        Persona p3 = s1.crearPersona();
-        System.out.println("ingrese los datos de la cuarta persona");
-        Persona p4 = s1.crearPersona();
-
-        int[] IMC= new int[4];
-        boolean[] ME= new boolean[4];
-
-        IMC[0] = s1.calcularIMC(p1);
-        ME[0] = s1.esMayorDeEdad(p1);
-        IMC[1] = s1.calcularIMC(p2);
-        ME[1] = s1.esMayorDeEdad(p2);
-        IMC[2] = s1.calcularIMC(p3);
-        ME[2] = s1.esMayorDeEdad(p3);
-        IMC[3] = s1.calcularIMC(p4);
-        ME[3] = s1.esMayorDeEdad(p4);
-        
+  
+        Persona[] p = new Persona[4];
+        int IMC;
+        boolean ME;
         int debajo = 0;
         int encima = 0;
         int ideal = 0;
         int mayores = 0;
         int menores = 0;
-        
-        
+   
         for (int i = 0; i < 4; i++) {
-            
-            if (IMC[i] < 1) {
+            System.out.println("ingrese los datos de la primer persona");
+            p[i] = s1.crearPersona();
+
+            IMC = s1.calcularIMC(p[i]);
+            ME = s1.esMayorDeEdad(p[i]);
+ 
+            if (IMC < 1) {
                 debajo +=1;
-            }else if(IMC[i] > 1){
+            }else if(IMC > 1){
                 encima += 1;
             }else{
                 ideal += 1;
             }
-            if (ME[i]) {
+            if (ME) {
                 mayores += 1;
             }else{
                 menores += 1;
