@@ -1,7 +1,7 @@
 
-package Ejercicio_1.Servicios;
+package Ejercicio_1.Servicio;
 
-import Ejercicio_1.Objetos.Libro;
+import Ejercicio_1.Entidad.Libro;
 import java.util.Scanner;
 
 /**
@@ -9,11 +9,12 @@ import java.util.Scanner;
  * @author Damian
  */
 public class LibroServicio {
+
+    Scanner Leer = new Scanner(System.in);   
     
     public Libro Cargar() {
 
         Libro L1 = new Libro();
-        Scanner Leer = new Scanner(System.in);
 
         System.out.println("ingrese el ISBN");
         L1.setISBN(Leer.nextInt());

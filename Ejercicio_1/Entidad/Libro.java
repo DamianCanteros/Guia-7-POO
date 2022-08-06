@@ -1,5 +1,5 @@
 
-package Ejercicio_1.Objetos;
+package Ejercicio_1.Entidad;
 
 /**
  *

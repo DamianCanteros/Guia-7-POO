@@ -7,8 +7,8 @@ numero de páginas.
  */
 package Ejercicio_1;
 
-import Ejercicio_1.Objetos.Libro;
-import Ejercicio_1.Servicios.LibroServicio;
+import Ejercicio_1.Entidad.Libro;
+import Ejercicio_1.Servicio.LibroServicio;
 
 /**
  *
