@@ -9,6 +9,8 @@ ordenados al arreglo B de 20 elementos, y rellenar los 10 últimos elementos con
  */
 package Ejercicio_10;
 
+import java.util.Arrays;
+
 /**
  *
  * @author Damian
@@ -24,6 +26,19 @@ public class Ejercicio_10 {
             
             VectorA[i]= Math.random()*100;
         }
+        System.out.println("VectorA: "+Arrays.toString(VectorA));
         
+        Arrays.sort(VectorA);
+        
+        for (int i = 0; i < 10; i++) {
+            
+            VectorB[i]=VectorA[i];
+        }
+        for (int i = 10; i < 20; i++) {
+            
+            VectorB[i]=0.5;
+        }
+        System.out.println("VectorA: "+Arrays.toString(VectorA));
+        System.out.println("VectorB: "+Arrays.toString(VectorB));
     }
 }
