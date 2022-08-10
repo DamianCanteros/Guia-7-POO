@@ -14,19 +14,17 @@ public class CadenaServicio {
     Cadena c1 = new Cadena();
     
 //se le pide al usuario que ingrese una frase y se guarda la frase y la longitud
-    public Cadena crearCadena (){
+    public void crearCadena (){
         
         System.out.println("ingrese una frase que puede ser una palabra o varias palabras separadas por un espacio en blanco");
         c1.setFrase(leer.nextLine());
         c1.setLongitud(c1.getFrase().length());
         System.out.println(c1.getFrase());
         System.out.println(c1.getLongitud());
-        return c1;
-        
     }
     
     //contabiliza la cantidad de vocales que tiene la frase ingresada.
-    public int mostrarVocales(Cadena c1){
+    public int mostrarVocales(){
         
         int vocales=0;
         
@@ -44,7 +42,7 @@ public class CadenaServicio {
     
     
 //invierte la frase ingresada y la muestra por pantalla
-    public void invertirFrase(Cadena c1){
+    public void invertirFrase(){
          
         System.out.println("FRASE ORIGINAL");
         System.out.println("");
@@ -57,7 +55,7 @@ public class CadenaServicio {
     }
     
 //recibe un carácter ingresado por el usuario y contabiliza cuántas veces se repite el carácter en la frase
-    public void vecesRepetido(String letra, Cadena c1){
+    public void vecesRepetido(String letra){
                
         int j=0;
         
@@ -72,19 +70,19 @@ public class CadenaServicio {
     }
       
 //compara la longitud de la frase con otra nueva frase ingresada por el usuario.
-    public boolean compararLongitud(String frase, Cadena c1){
+    public boolean compararLongitud(String frase){
         
         return c1.getLongitud()==frase.length();    
     }
     
 //une la frase contenida en la clase Cadena con una nueva frase y muestra la frase resultante
-    public void unirFrases(String frase, Cadena c1){
+    public void unirFrases(String frase){
         
         System.out.println(c1.getFrase().concat(frase));
     }
     
 //reemplazar todas las letras “a” en la frase, por otro carácter ingresado por el usuario y muestra lafrase resultante
-    public void reemplazar(String letra, Cadena c1){
+    public void reemplazar(String letra){
         
         for (int i = 0; i < c1.getLongitud(); i++) {
 
@@ -98,7 +96,7 @@ public class CadenaServicio {
     }
      
 //comprueba si la frase contiene una letra ingresada por el usuario y devuelve verdadero si la contiene y falso si no
-    public boolean contiene(String letra, Cadena c1){
+    public boolean contiene(String letra){
         
         return c1.getFrase().contains(letra);
     }

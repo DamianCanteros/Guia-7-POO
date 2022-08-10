@@ -14,7 +14,7 @@ public class PuntosServicio {
     Puntos p1 = new Puntos();
     
 //Generar un objeto puntos que le pide al usuario los dos puntos
-    public Puntos crearPuntos(){
+    public void crearPuntos(){
         
         System.out.println("Ingrese las coodenadas del primer punto");
         System.out.print("X: ");
@@ -26,12 +26,10 @@ public class PuntosServicio {
         p1.setX2(leer.nextInt());
         System.out.print("Y: ");
         p1.setY2(leer.nextInt());
-        
-        return p1;
     }
 
 //calcula y devuelve la distancia que existe entre los dos puntos
-    public double calcularDistancia(Puntos p1){
+    public double calcularDistancia(){
         
         return Math.sqrt(Math.pow(p1.getX2()-p1.getX1(), 2)+Math.pow(p1.getY2()-p1.getY1(), 2));
     }

@@ -10,29 +10,26 @@ import java.util.Scanner;
  */
 public class CuentaServicio {
     
+    Cuenta c1 = new Cuenta();
     Scanner leer = new Scanner(System.in);
     
-    public Cuenta CrearCuenta(){
-        
-        Cuenta c1 = new Cuenta();
-        
+    public void CrearCuenta(){
+
         System.out.println("ingrese el número de cuenta");
         c1.setNumeroCuenta(leer.nextInt());
         System.out.println("ingrese el DNI");
         c1.setDNI(leer.nextInt());
         System.out.println("ingrese el saldo actual");
         c1.setSaldoActual(leer.nextInt());
-        
-        return c1;
     }
     
-    public void Ingresar(Cuenta c1, int CantDinero){
+    public void Ingresar(int CantDinero){
         
         c1.setSaldoActual(c1.getSaldoActual()+CantDinero);
 
     }
     
-    public void Retirar(Cuenta c1, int CantDinero){
+    public void Retirar(int CantDinero){
         
         if (c1.getSaldoActual()<=  CantDinero){
             c1.setSaldoActual(0);
@@ -42,7 +39,7 @@ public class CuentaServicio {
 
     }
     
-    public void extraccionRapida(Cuenta c1, int CantDinero){
+    public void extraccionRapida(int CantDinero){
         
         if (c1.getSaldoActual()*0.2 <  CantDinero){
             System.out.println("no puede extraer mas del 20% del saldo actual");
@@ -51,11 +48,11 @@ public class CuentaServicio {
         }
     }
     
-    public void consultarSaldo(Cuenta c1){
+    public void consultarSaldo(){
         System.out.println("su saldo disponible es " + c1.getSaldoActual());
     }
     
-    public void consultarDatos(Cuenta c1){
+    public void consultarDatos(){
         System.out.println(c1.toString());
     }
 }

@@ -54,10 +54,10 @@ public class Ejercicio_7 {
    
         for (int i = 0; i < 4; i++) {
             System.out.println("ingrese los datos de la primer persona");
-            p[i] = s1.crearPersona();
+            s1.crearPersona();
 
-            IMC = s1.calcularIMC(p[i]);
-            ME = s1.esMayorDeEdad(p[i]);
+            IMC = s1.calcularIMC();
+            ME = s1.esMayorDeEdad();
  
             if (IMC < 1) {
                 debajo +=1;

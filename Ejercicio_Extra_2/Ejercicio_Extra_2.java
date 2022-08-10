@@ -8,7 +8,6 @@ calcular la distancia entre dos puntos consulte el siguiente link:
  */
 package Ejercicio_Extra_2;
 
-import Ejercicio_Extra_2.Entidad.Puntos;
 import Ejercicio_Extra_2.Servicio.PuntosServicio;
 
 /**
@@ -23,8 +22,8 @@ public class Ejercicio_Extra_2 {
     public static void main(String[] args) {
 
         PuntosServicio s1 = new PuntosServicio();
-        Puntos p1 = s1.crearPuntos();
+        s1.crearPuntos();
         
-        System.out.println("La distancia entre ambos puntos es: "+s1.calcularDistancia(p1));
+        System.out.println("La distancia entre ambos puntos es: "+s1.calcularDistancia());
     }
 }

@@ -17,7 +17,6 @@ informa al usuario. Si no, se hace la división y se devuelve el resultado al ma
  */
 package Ejercicio_3;
 
-import Ejercicio_3.Entidad.Operacion;
 import Ejercicio_3.Servicio.OperacionServicio;
 
 /**
@@ -29,18 +28,19 @@ public class Ejercicio_3 {
     public static void main(String[] args) {
 
         OperacionServicio s1 = new OperacionServicio();
-        Operacion o1 = s1.crearOperacion();
-        System.out.println("La suma es " + s1.sumar(o1)); 
-        System.out.println("La resta es "+s1.restar(o1)); 
-        if (s1.multiplicar(o1)==0){
+        s1.crearOperacion();
+        
+        System.out.println("La suma es " + s1.sumar()); 
+        System.out.println("La resta es "+s1.restar()); 
+        if (s1.multiplicar()==0){
             System.out.println("esta multiplicando por cero");
         }else {
-            System.out.println("La multiplicación es "+s1.multiplicar(o1));  
+            System.out.println("La multiplicación es "+s1.multiplicar());  
         }
-        if (s1.dividir(o1)==0){
+        if (s1.dividir()==0){
             System.out.println("esta dividiendo por cero");
         }else {
-            System.out.println("La division es "+s1.dividir(o1));   
+            System.out.println("La division es "+s1.dividir());   
         }
     }
 }

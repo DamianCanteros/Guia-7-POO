@@ -21,7 +21,6 @@ Nota: Formula ecuación 2o grado: (-b±√((b^2)-(4*a*c)))/(2*a) Solo varia el s
  */
 package Ejercicio_Extra_3;
 
-import Ejercicio_Extra_3.Entidad.Raices;
 import Ejercicio_Extra_3.Servicio.RaicesServicio;
 
 /**
@@ -33,8 +32,7 @@ public class Ejercicio_Extra_3 {
     public static void main(String[] args) {
 
         RaicesServicio s1 = new RaicesServicio();
-        Raices r1 = s1.cargarRaices();
-        
-        s1.calcular(r1);  
+        s1.cargarRaices();
+        s1.calcular();
     }
 }

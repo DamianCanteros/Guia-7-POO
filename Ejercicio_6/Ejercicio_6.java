@@ -17,7 +17,6 @@ recibe y se añade a la cafetera la cantidad de café indicada.
  */
 package Ejercicio_6;
 
-import Ejercicio_6.Entidad.Cafetera;
 import Ejercicio_6.Servicio.CafeteraServicio;
 import java.util.Scanner;
 
@@ -32,7 +31,7 @@ public class Ejercicio_6 {
         Scanner leer = new Scanner(System.in);
         CafeteraServicio s1 = new CafeteraServicio();
         
-        Cafetera c1 = s1.llenarCafetera();
+        s1.llenarCafetera();
         int opcion;
 
         do {
@@ -50,15 +49,15 @@ public class Ejercicio_6 {
                 case 1:
                     System.out.println("ingrese el tamaño de la taza vacía");
                     int taza = leer.nextInt();
-                    s1.servirTaza(c1,taza);
+                    s1.servirTaza(taza);
                 break;
                 case 2:
-                    s1.vaciarCafetera(c1);
+                    s1.vaciarCafetera();
                 break;
                 case 3:
                     System.out.println("ingrese la cantidad de café");
                     int cafe = leer.nextInt();
-                    s1.agregarCafe(c1,cafe);
+                    s1.agregarCafe(cafe);
                 break;
             }   
         } while (opcion !=4);           

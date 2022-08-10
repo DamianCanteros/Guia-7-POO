@@ -18,7 +18,6 @@ anterior.
 package Ejercicio_12;
 
 
-import Ejercicio_12.Entidad.Persona;
 import Ejercicio_12.Servicio.PersonaServicio;
 import java.util.Scanner;
 
@@ -33,14 +32,14 @@ public class Ejercicio_12 {
         Scanner leer = new Scanner(System.in);
         PersonaServicio s1 = new PersonaServicio();
         
-        Persona p1 = s1.crearPersona();
+        s1.crearPersona();
         
-        System.out.println("la edad de la persona ingresa es "+s1.calcularEdad(p1));
+        System.out.println("la edad de la persona ingresa es "+s1.calcularEdad());
         
         System.out.println("ingrese una edad");
         int edad = leer.nextInt();
-        System.out.println("la edad ingresada es mayor que la del receptor "+s1.menorQue(edad,p1));
+        System.out.println("la edad ingresada es mayor que la del receptor "+s1.menorQue(edad));
         
-        s1.mostrarPersona(p1);
+        s1.mostrarPersona();
     }  
 }

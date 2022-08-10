@@ -15,7 +15,7 @@ public class PersonaServicio {
     Persona p1 = new Persona();
 
 //rellena el objeto mediante un Scanner
-    public Persona crearPersona(){
+    public void crearPersona(){
         
         System.out.println("ingrese el nombre");
         p1.setNombre(leer.next());
@@ -29,12 +29,10 @@ public class PersonaServicio {
         
         Date fecha = new Date(anio-1900,mes-1,dia);
         p1.setFechaDeNacimiento(fecha);
-
-        return p1;
     }
     
 //calcula la edad a partir de la fecha de nacimiento ingresada
-    public int calcularEdad(Persona p1){
+    public int calcularEdad(){
         
         Date fechaActual = new Date();
         if (fechaActual.getMonth()>p1.getFechaDeNacimiento().getMonth()) {
@@ -46,13 +44,13 @@ public class PersonaServicio {
     }
     
 //retorna true en caso de que el receptor tenga menor edad que la persona que se recibe como parámetro, o false en caso contrario.   
-    public boolean menorQue(int edad,Persona p1){
+    public boolean menorQue(int edad){
 
-        return calcularEdad(p1)< edad;
+        return calcularEdad()< edad;
     }
     
 //muestra la persona creada
-    public void mostrarPersona(Persona p1){
+    public void mostrarPersona(){
 
         System.out.println(p1.toString());
     }

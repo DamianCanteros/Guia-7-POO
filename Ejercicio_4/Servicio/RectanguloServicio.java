@@ -9,20 +9,21 @@ import java.util.Scanner;
  * @author Damian
  */
 public class RectanguloServicio {
+    
+    Rectangulo r1 = new Rectangulo();
     Scanner leer = new Scanner(System.in);
     
-    public Rectangulo crearRectangulo(){
-        Rectangulo r1 = new Rectangulo();
+    public void crearRectangulo(){
+
         
         System.out.println("ingrese la base");
         r1.setBase(leer.nextInt());
         System.out.println("ingrese la altura");
         r1.setAltura(leer.nextInt());   
-        
-        return r1;
+
     }
     
-    public double calcularSuperficie (Rectangulo r1){
+    public double calcularSuperficie (){
         
         double superficie = r1.getBase()*r1.getAltura();
         
@@ -30,14 +31,14 @@ public class RectanguloServicio {
         
     }
     
-    public double calcularPerimetro (Rectangulo r1){
+    public double calcularPerimetro (){
         
          double perimetro = 2 * r1.getBase()*r1.getAltura();
         
         return perimetro;
     }
     
-    public void mostrarRectangulo (Rectangulo r1){
+    public void mostrarRectangulo (){
         
         for(int i=1 ; i<=r1.getAltura() ; i++) {
             

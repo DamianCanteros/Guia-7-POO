@@ -10,7 +10,6 @@ e) Método perimetro(): para calcular el perímetro (���������
  */
 package Ejercicio_2;
 
-import Ejercicio_2.Entidad.Circunferencia;
 import Ejercicio_2.Servicio.CircunferenciaServicio;
 
 /**
@@ -22,9 +21,10 @@ public class Ejercicio_2 {
     public static void main(String[] args) {
         
         CircunferenciaServicio s1 = new CircunferenciaServicio();
-        Circunferencia c1 = s1.crearCircunferencia();
-        System.out.println("el area de la circunferencia es " + s1.calcularArea(c1));
-        System.out.println("el perimetro de la circunferencia es " + s1.calcularPerimetro(c1));
+        s1.crearCircunferencia();
+        
+        System.out.println("el area de la circunferencia es " + s1.calcularArea());
+        System.out.println("el perimetro de la circunferencia es " + s1.calcularPerimetro());
 
     }   
 }

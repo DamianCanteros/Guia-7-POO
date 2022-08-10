@@ -23,7 +23,6 @@ ingresa el usuario y devuelve verdadero si la contiene y falso si no.
  */
 package Ejercicio_8;
 
-import Ejercicio_8.Entidad.Cadena;
 import Ejercicio_8.Servicio.CadenaServicio;
 import java.util.Scanner;
 
@@ -38,7 +37,7 @@ public class Ejercicio_8 {
         Scanner leer = new Scanner(System.in);
         CadenaServicio s1 = new CadenaServicio();
         
-        Cadena c1 = s1.crearCadena();
+        s1.crearCadena();
         int opcion;
         String frase="";
         String letra="";
@@ -68,25 +67,25 @@ public class Ejercicio_8 {
 
             switch(opcion){
                 case 1:
-                    System.out.println("la frase tiene "+s1.mostrarVocales(c1)+" vocales") ;
+                    System.out.println("la frase tiene "+s1.mostrarVocales()+" vocales") ;
                 break;
                 case 2:
-                    s1.invertirFrase(c1);
+                    s1.invertirFrase();
                 break;
                 case 3:
-                    System.out.println(s1.compararLongitud(frase, c1));
+                    System.out.println(s1.compararLongitud(frase));
                 break;
                 case 4:
-                    s1.unirFrases(frase, c1);
+                    s1.unirFrases(frase);
                 break;
                 case 5:
-                    s1.vecesRepetido(letra, c1);
+                    s1.vecesRepetido(letra);
                 break;
                 case 6:
-                    s1.reemplazar(letra, c1);
+                    s1.reemplazar(letra);
                 break;
                 case 7:
-                   System.out.println(s1.contiene(letra, c1));
+                   System.out.println(s1.contiene(letra));
                 break;
             }   
         } while (opcion !=8);           

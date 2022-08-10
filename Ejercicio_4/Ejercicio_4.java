@@ -10,7 +10,6 @@ Superficie = base * altura / Perímetro = (base + altura) * 2.
  */
 package Ejercicio_4;
 
-import Ejercicio_4.Entidad.Rectangulo;
 import Ejercicio_4.Servicio.RectanguloServicio;
 
 /**
@@ -22,10 +21,10 @@ public class Ejercicio_4 {
     public static void main(String[] args) {
         
         RectanguloServicio s1 = new RectanguloServicio();
-        Rectangulo r1 = s1.crearRectangulo();
+        s1.crearRectangulo();
         
-        System.out.println("la superficie del rectangulo es " + s1.calcularSuperficie(r1));
-        System.out.println("el perimetro del rectangulo es " + s1.calcularPerimetro(r1));
-        s1.mostrarRectangulo(r1);
+        System.out.println("la superficie del rectangulo es " + s1.calcularSuperficie());
+        System.out.println("el perimetro del rectangulo es " + s1.calcularPerimetro());
+        s1.mostrarRectangulo();
     }
 }

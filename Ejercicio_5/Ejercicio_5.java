@@ -17,7 +17,6 @@ h) Método consultarDatos(): permitirá mostrar todos los datos de la cuenta
  */
 package Ejercicio_5;
 
-import Ejercicio_5.Entidad.Cuenta;
 import Ejercicio_5.Servicio.CuentaServicio;
 import java.util.Scanner;
 
@@ -32,7 +31,7 @@ public class Ejercicio_5 {
         CuentaServicio s1 = new CuentaServicio();
         Scanner leer = new Scanner(System.in);
         
-        Cuenta c1 = s1.CrearCuenta();
+        s1.CrearCuenta();
         int opcion;
         int CantDinero;   
 
@@ -52,23 +51,23 @@ public class Ejercicio_5 {
                 case 1:
                     System.out.println("cuanto dinero desea ingresar");
                     CantDinero = leer.nextInt();
-                    s1.Ingresar(c1,CantDinero);
+                    s1.Ingresar(CantDinero);
                 break;
                 case 2:
                     System.out.println("cuanto dinero desea retirar");
                     CantDinero = leer.nextInt();
-                    s1.Retirar(c1,CantDinero);
+                    s1.Retirar(CantDinero);
                 break;
                 case 3:
                     System.out.println("cuanto dinero desea retirar");
                     CantDinero = leer.nextInt();
-                    s1.extraccionRapida(c1,CantDinero);
+                    s1.extraccionRapida(CantDinero);
                 break;
                 case 4:
-                    s1.consultarSaldo(c1);
+                    s1.consultarSaldo();
                 break;
                 case 5:
-                    s1.consultarDatos(c1);
+                    s1.consultarDatos();
                 break;
             } 
         } while (opcion !=6);           
