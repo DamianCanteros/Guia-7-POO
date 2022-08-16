@@ -16,6 +16,8 @@ obtener la letra correspondiente. La tabla de caracteres es la siguiente:
  */
 package Ejercicio_Extra_4;
 
+import Ejercicio_Extra_4.Servicio.NIFServicio;
+
 /**
  *
  * @author Damian
@@ -24,7 +26,9 @@ public class Ejercicio_Extra_4 {
 
     public static void main(String[] args) {
 
-        
+        NIFServicio s1 = new NIFServicio();
+        s1.crearNif();
+        s1.mostrar();
     }
     
 }

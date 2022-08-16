@@ -14,18 +14,21 @@ public class NIFServicio {
     NIF n1 = new NIF();
     
 //le pide al usuario el DNI y calcula la letra que le corresponde  
-    public NIF crearNif(){
+    public void crearNif(){
         
         System.out.println("ingrese el DNI");
         n1.setDNI(leer.nextInt());
+        
+        String Vector[]= {"T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E"};
 
-        n1.setLetra() n1.setDNI/23
-        return n1;
+        n1.setLetra(Vector[n1.getDNI()%23]); 
     }
-}
+    
+//muestra el NIF (ocho dígitos, un guion y la letra en mayúscula
+    public void mostrar(){
 
-switch(n1.setDNI/23){
-    case 1:
-    break;
-
+        System.out.println(n1.getDNI()+"-"+n1.getLetra());
+    }
+    
+    
 }
